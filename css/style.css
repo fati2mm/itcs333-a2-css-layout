@@ -1,7 +1,143 @@
 /* ITCS333 A2 starter — implement the design spec from index.html here.
    See README rubric for the graded checks. Do not use inline styles. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
 
 /* TODO: style #site-header (padding, border-bottom) */
+#site-header{
+padding: 16px;
+border-bottom: 2px solid #ccc;
+margin-bottom: 24px;
+background-color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.main-nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #596169ac;
+}
+
+.main-nav a:hover {
+  text-decoration:underline;
+  color: #0055b3;
+  
+}
+
+.content-section {
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+}
+.content-section h2 {
+  margin-bottom: 15px;
+}
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+.schedule-table th, 
+.schedule-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.schedule-table th {
+    background-color: #0055b3;
+    color: white;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
 /* TODO: style .card (padding, border, gap) and .card-grid (display, gap, 3 columns) */
+.card {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.card .weight {
+  font-weight: bold;
+  color: #0055b3;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.register-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 /* TODO: style form inputs (padding) and a :focus state */
+.register-form input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.register-form input:focus {
+  outline: none;
+  border-color: #0066cc;
+  
+}
+.register-form input:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+.btn-primary {
+  padding: 10px 15px;
+  background-color: #377ac6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn-primary:hover {
+  background-color:#0055b3;
+  
+}
+
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+}
+
 /* TODO: add a @media (max-width: 700px) query collapsing .card-grid to one column */
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
